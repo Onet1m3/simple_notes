@@ -1,0 +1,13 @@
+[package]
+name = "supernote"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dirs = "7.0.0"
+eframe = "0.37"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+ksni = { version = "0.3.7", features = ["blocking"] }
